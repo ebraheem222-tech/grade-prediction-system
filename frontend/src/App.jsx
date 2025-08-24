@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState,useEffect } from 'react';
 import { Upload, Plus, X, Search, FileText, Users, BookOpen, TrendingUp, AlertCircle, Check } from 'lucide-react';
 import Papa from 'papaparse';
 import './index.css'
@@ -94,60 +94,117 @@ function App() {
 
   // Prediction Handlers
   const addGradeForPrediction = () => {
-    const courseCode = document.getElementById('gradeCourseCode').value;
-    const grade = document.getElementById('gradeValue').value;
-    
-    if (!courseCode || !grade) {
-      showNotification('Please enter course code and grade', 'error');
-      return;
-    }
+  const rawCode = document.getElementById('gradeCourseCode').value;
+  const gradeStr = document.getElementById('gradeValue').value;
 
-    setSelectedGrades([...selectedGrades, { courseCode, grade: parseFloat(grade) }]);
-    document.getElementById('gradeCourseCode').value = '';
-    document.getElementById('gradeValue').value = '';
-  };
+  const courseCode = (rawCode || '').trim().toUpperCase();
+  const grade = Number(gradeStr);
+
+  if (!courseCode || Number.isNaN(grade)) {
+    showNotification('Please enter a valid course code and numeric grade', 'error');
+    return;
+  }
+  if (courseCode === (targetCourse || '').trim().toUpperCase()) {
+    showNotification('Target course cannot be included in history', 'error');
+    return;
+  }
+  if (selectedGrades.some(g => g.courseCode.toUpperCase() === courseCode)) {
+    showNotification('You already added this course. Edit it instead.', 'error');
+    return;
+  }
+  setSelectedGrades(prev => [{ courseCode, grade },...prev]);
+  document.getElementById('gradeCourseCode').value = '';
+  document.getElementById('gradeValue').value = '';
+};
+
 
   const removeGrade = (index) => {
     setSelectedGrades(selectedGrades.filter((_, i) => i !== index));
   };
 
-  const predictGrade = async () => {
-    if (selectedGrades.length < 2) {
-      showNotification('Please add at least 2 grades for prediction', 'error');
-      return;
-    }
-    if (!targetCourse) {
-      showNotification('Please select a target course', 'error');
-      return;
-    }
+const predictGrade = async () => {
+  const target = (targetCourse || '').trim().toUpperCase();
 
-    setIsLoading(true);
-    try {
-      const response = await fetch(`${API_URL}/predict`, {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-          studentGrades: selectedGrades,
-          targetCourseCode: targetCourse,
-          k: 7,
-          minCommonCourses: 2
-        })
-      });
+  if (!target) {
+    showNotification('Please select a target course', 'error');
+    return;
+  }
 
-      if (!response.ok) {
-        throw new Error('Prediction failed');
-      }
+  // Ignore any history rows that match the target course (case-insensitive)
+  const filtered = selectedGrades.filter(
+    g => (g.courseCode || '').trim().toUpperCase() !== target
+  );
 
-      const data = await response.json();
-      setPrediction(data);
+  // Require at least 1 prior distinct course (easier for testing; bump to 2 later)
+  const distinctCount = new Set(filtered.map(g => (g.courseCode || '').trim().toUpperCase())).size;
+  if (distinctCount < 1) {
+    showNotification('Add at least 1 course (not the target) to predict', 'error');
+    return;
+  }
+    
+
+  // Enrich with courseId if available
+  const payloadGrades = filtered.map(g => {
+    const code = (g.courseCode || '').trim().toUpperCase();
+    const course = courses.find(c => (c.code || '').trim().toUpperCase() === code);
+    console.log(course);
+    return {
+      code,
+      courseCode: code,
+      courseId: course?.courseId ?? null,
+      grade: Number(g.grade),
+    };
+  });
+
+  const targetCourseObj = courses.find(
+    c => (c.code || '').trim().toUpperCase() === target
+  );
+
+  setIsLoading(true);
+  try {
+    const res = await fetch(`${API_URL}/predict`, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        studentGrades: payloadGrades,
+        targetCourseCode: target,
+        targetCourseId: targetCourseObj?.courseId ?? null,
+        k: 3,                 // start small for testing
+        minCommonCourses: 1,  // relax for small datasets
+      }),
+    });
+
+    const text = await res.text();
+    if (!res.ok) throw new Error(text || `HTTP ${res.status}`);
+
+    const data = JSON.parse(text);
+    // Optional: let the user know we ignored target from history
+    if (filtered.length !== selectedGrades.length) {
+      showNotification(`Ignored ${target} from history while predicting`, 'success');
+    } else {
       showNotification('Prediction completed successfully');
-    } catch (error) {
-      showNotification(error.message, 'error');
-      setPrediction(null);
-    } finally {
-      setIsLoading(false);
     }
-  };
+    setPrediction(data);
+  } catch (e) {
+    showNotification(`Prediction failed: ${e.message}`, 'error');
+    setPrediction(null);
+  } finally {
+    setIsLoading(false);
+  }
+};
+
+
+useEffect(() => {
+  if (typeof window !== 'undefined') {
+    window.__courses = courses;
+    window.__transcripts = transcripts;
+    window.__students = students;
+  }
+}, [courses, transcripts, students]);
+useEffect(()=>{
+    console.log(selectedGrades);
+
+},[selectedGrades])
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
