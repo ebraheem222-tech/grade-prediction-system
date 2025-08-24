@@ -1,3 +1,4 @@
+// src/server.js
 import express from "express";
 import cors from "cors";
 import { z } from "zod";
@@ -8,20 +9,71 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
-const { courseIdByCode, studentVectors, takers, courseById } =
-  buildData({ baseDir: process.env.DATA_DIR || "data" });
+let data = buildData({ baseDir: process.env.DATA_DIR || "data" });
+let { courseIdByCode, studentVectors, takers, courseById, courses } = data;
 
-app.get("/", (_req, res) => res.json({ ok: true, routes: ["GET /health", "POST /predict"] }));
+console.log("[server] started", new Date().toISOString(), "DATA_DIR=", process.env.DATA_DIR || "data");
+
+// Root route
+app.get("/", (_req, res) =>
+  res.json({
+    ok: true,
+    routes: [
+      "GET /health",
+      "POST /predict",
+      "GET /debug/code/:code",
+      "GET /debug/dupes",
+      "POST /debug/reload"
+    ],
+  })
+);
+
+// Health check
 app.get("/health", (_req, res) => res.json({ ok: true, uptime: process.uptime() }));
 
+// --- DEBUG ROUTES ---
+app.get("/debug/code/:code", (req, res) => {
+  const code = String(req.params.code || "").trim();
+  const candidates = courses
+    .filter(c => String(c.code || "").trim() === code)
+    .map(c => {
+      const id = String(c.courseId || "").trim();
+      return { courseId: id, name: c.name ?? null, takers: takers[id]?.size ?? 0 };
+    });
+  res.json({ code, preferredCourseId: courseIdByCode[code] ?? null, candidates });
+});
+
+app.get("/debug/dupes", (_req, res) => {
+  const byCode = new Map();
+  for (const c of courses) {
+    const code = String(c.code || "").trim();
+    const id   = String(c.courseId || "").trim();
+    if (!code || !id) continue;
+    if (!byCode.has(code)) byCode.set(code, new Set());
+    byCode.get(code).add(id);
+  }
+  const duplicates = [];
+  for (const [code, set] of byCode) {
+    if (set.size > 1) {
+      const ids = [...set];
+      duplicates.push({ code, courseIds: ids, takers: ids.map(id => takers[id]?.size ?? 0) });
+    }
+  }
+  res.json({ duplicates });
+});
+
+app.post("/debug/reload", (_req, res) => {
+  data = buildData({ baseDir: process.env.DATA_DIR || "data" });
+  ({ courseIdByCode, studentVectors, takers, courseById, courses } = data);
+  res.json({ ok: true, reloaded: true });
+});
+
+// --- PREDICT ROUTE ---
 const Body = z.object({
-  studentGrades: z.array(z.object({
-    courseCode: z.string(),
-    grade: z.number().min(0).max(100)
-  })).min(2),
+  studentGrades: z.array(z.object({ courseCode: z.string(), grade: z.number().min(0).max(100) })).min(2),
   targetCourseCode: z.string(),
   k: z.number().int().min(1).max(50).optional(),
-  minCommonCourses: z.number().int().min(1).max(50).optional()
+  minCommonCourses: z.number().int().min(1).max(50).optional(),
 });
 
 app.post("/predict", (req, res) => {
@@ -30,7 +82,6 @@ app.post("/predict", (req, res) => {
 
   const { studentGrades, targetCourseCode, k, minCommonCourses } = parsed.data;
 
-  // Build query vector from posted grades
   const qVec = {};
   for (const g of studentGrades) {
     const cid = courseIdByCode[g.courseCode];
@@ -46,14 +97,14 @@ app.post("/predict", (req, res) => {
     studentVectors,
     takersForCourse: takers[targetCourseId],
     k: k ?? 7,
-    minCommonCourses: minCommonCourses ?? 2
+    minCommonCourses: minCommonCourses ?? 2,
   });
 
   const neighbors = result.neighbors.map(n => ({
     studentId: n.sid,
     similarity: Math.round(n.sim * 1000) / 1000,
     overlap: n.overlap,
-    theirGrade: Math.round(n.grade01 * 1000) / 10
+    theirGrade: Math.round(n.grade01 * 1000) / 10,
   }));
 
   res.json({
@@ -61,7 +112,7 @@ app.post("/predict", (req, res) => {
     predictedGrade: result.predictedGrade,
     confidence: result.confidence,
     k: neighbors.length,
-    neighbors
+    neighbors,
   });
 });
 
