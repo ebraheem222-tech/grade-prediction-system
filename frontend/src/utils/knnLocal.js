@@ -38,7 +38,6 @@ export function cosineSimilarity(vecA, vecB) {
 export function predictLocally(studentGrades, targetCourseId, transcripts, k, minCommon) {
   const { vectors, takers } = buildLocalStudentVectors(transcripts);
 
-  // query vector
   const q = {};
   studentGrades.forEach(g => {
     const cid = g.courseId || g.courseCode;
@@ -58,7 +57,7 @@ export function predictLocally(studentGrades, targetCourseId, transcripts, k, mi
         studentId: sid,
         similarity,
         overlap,
-        theirGrade: Math.round(v[targetCourseId] * 1000 * 100) / 1000, // 0..1 -> percent
+        theirGrade: Math.round(v[targetCourseId] * 1000 * 100) / 1000, 
       });
     }
   }

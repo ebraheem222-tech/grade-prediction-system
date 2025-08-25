@@ -63,7 +63,6 @@ export default function PredictionTab({ courses, transcripts, showNotification }
 
     setIsLoading(true);
     try {
-      // Try local (manual) data first
       const local = predictLocally(filtered, targetCourseId, transcripts, knnConfig.k, knnConfig.minCommonCourses);
       if (local && local.neighbors.length > 0) {
         setPrediction({
@@ -78,7 +77,6 @@ export default function PredictionTab({ courses, transcripts, showNotification }
         return;
       }
 
-      // Fallback to backend
       const payloadGrades = filtered.map(g => ({
         courseCode: g.courseCode,
         courseId: g.courseId,
@@ -103,7 +101,6 @@ export default function PredictionTab({ courses, transcripts, showNotification }
 
   return (
     <div className="grid md:grid-cols-2 gap-6">
-      {/* left panel */}
       <div className="bg-white rounded-xl shadow-lg p-6">
         <h2 className="text-xl font-bold mb-4 flex items-center gap-2">
           <Search className="text-indigo-600" />
@@ -165,7 +162,6 @@ export default function PredictionTab({ courses, transcripts, showNotification }
           />
         </div>
 
-        {/* Advanced Config (unchanged style) */}
         <div className="mb-4 border-t pt-4">
           <button
             onClick={() => setShowAdvanced(!showAdvanced)}
@@ -243,7 +239,6 @@ export default function PredictionTab({ courses, transcripts, showNotification }
         </button>
       </div>
 
-      {/* right panel */}
       <div className="bg-white rounded-xl shadow-lg p-6">
         <h2 className="text-xl font-bold mb-4">Prediction Results</h2>
         {prediction ? (
