@@ -28,7 +28,7 @@ app.get("/", (_req, res) =>
   })
 );
 
-// Health check
+
 app.get("/health", (_req, res) => res.json({ ok: true, uptime: process.uptime() }));
 
 // --- DEBUG ROUTES ---

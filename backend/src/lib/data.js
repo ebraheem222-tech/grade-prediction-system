@@ -9,7 +9,7 @@ function clamp01(x) {
 }
 
 function isNewer(a, b) {
-  // Prefer higher attemptNo, then later year, then later term
+
   const aTry = Number(a.attemptNo ?? 1), bTry = Number(b.attemptNo ?? 1);
   if (aTry !== bTry) return aTry > bTry;
   const aYear = Number(a.year ?? 0), bYear = Number(b.year ?? 0);
@@ -19,21 +19,16 @@ function isNewer(a, b) {
   return aTerm >= bTerm;
 }
 
-/**
- * Build in-memory data structures from CSVs.
- * - Picks the courseId for each code that has the MOST takers in transcripts.
- * - Keeps only the best (latest) attempt per (studentId, courseId).
- * - Returns takers as Sets (use .size when serializing).
- */
+
 export function buildData({ baseDir = "data", log = true } = {}) {
   const { courses, students, transcripts } = loadCsvs(baseDir);
 
-  // --- Normalize & index courses ---
+
   const courseById = Object.fromEntries(
     courses.map(c => [String(c.courseId || "").trim(), c])
   );
 
-  // Group every code -> all courseIds that use that code
+
   const rawIdsByCode = new Map();
   for (const c of courses) {
     const code = String(c.code || "").trim();
@@ -43,8 +38,8 @@ export function buildData({ baseDir = "data", log = true } = {}) {
     rawIdsByCode.get(code).add(id);
   }
 
-  // --- Keep only the latest attempt per (student, course) ---
-  const bestAttempt = new Map(); // key = `${sid}|${cid}` => transcript row
+
+  const bestAttempt = new Map();
   for (const r of transcripts) {
     const sid = String(r.studentId || "").trim();
     const cid = String(r.courseId  || "").trim();
@@ -55,9 +50,9 @@ export function buildData({ baseDir = "data", log = true } = {}) {
     }
   }
 
-  // --- Build student vectors & takers ---
-  const studentVectors = {};           // { [studentId]: { [courseId]: grade01 } }
-  const takers = {};                   // { [courseId]: Set<studentId> }
+
+  const studentVectors = {};           
+  const takers = {};                   
   for (const [, r] of bestAttempt) {
     const sid = String(r.studentId).trim();
     const cid = String(r.courseId).trim();
@@ -66,9 +61,9 @@ export function buildData({ baseDir = "data", log = true } = {}) {
     (takers[cid] ||= new Set()).add(sid);
   }
 
-  // --- Choose preferred courseId per code by MAX takers ---
-  const courseIdByCode = {};           // { [code]: preferredCourseId }
-  const courseIdsByCode = {};          // { [code]: string[] } for debugging
+
+  const courseIdByCode = {};           
+  const courseIdsByCode = {};          
   for (const [code, idSet] of rawIdsByCode.entries()) {
     let bestId = null;
     let bestCount = -1;
@@ -90,7 +85,7 @@ export function buildData({ baseDir = "data", log = true } = {}) {
     console.log(
       `[data] studentVectors=${Object.keys(studentVectors).length} takers(courses)=${Object.keys(takers).length}`
     );
-    // Warn about duplicate codes and show taker counts per candidate id
+
     for (const [code, ids] of Object.entries(courseIdsByCode)) {
       if (ids.length > 1) {
         const counts = ids.map(id => `${id}:${takers[id]?.size ?? 0}`).join(", ");
@@ -105,7 +100,7 @@ export function buildData({ baseDir = "data", log = true } = {}) {
     transcripts,
     courseById,
     courseIdByCode,
-    courseIdsByCode,   // useful for /debug endpoints
+    courseIdsByCode,   
     studentVectors,
     takers
   };
