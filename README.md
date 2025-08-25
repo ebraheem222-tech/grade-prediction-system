@@ -3,6 +3,12 @@
 A small full-stack app that predicts a student’s grade in a target course using k-Nearest Neighbors (KNN).  
 Frontend is React (Vite + HMR). Backend is Node/Express with CSV-backed data.
 
+## TIPS USE WEBSITE
+-FIRT go tab student you can add manual or upload data student in folder backend/data
+-Second after add some student you can add course manual or upload in folder backend/data
+-After add Some courses go tabs grades add course id from you added and student from added and add grades or you can upload csv read from backend/data
+-then go to tabs predict and add a least 3 course code and grade use predict then enter the target and click predict will see the result 
+
 ## ✨ Features
 
 - Upload **Students / Courses / Transcripts** CSVs
