@@ -1,0 +1,301 @@
+studentId,firstName,lastName,email,program,startYear
+STU0001,Roni,Moyal,roni.moyal1@example.edu,Psychology,2022
+STU0002,Adam,Azoulay,adam.azoulay2@example.edu,Information Systems,2021
+STU0003,Yoni,Cohen,yoni.cohen3@example.edu,Psychology,2023
+STU0004,Sara,Friedman,sara.friedman4@example.edu,Information Systems,2021
+STU0005,Maya,Levi,maya.levi5@example.edu,Information Systems,2021
+STU0006,Liam,Khoury,liam.khoury6@example.edu,Computer Science,2023
+STU0007,Sara,Katz,sara.katz7@example.edu,Economics,2021
+STU0008,Roy,Dahan,roy.dahan8@example.edu,Psychology,2023
+STU0009,Hila,Azoulay,hila.azoulay9@example.edu,Economics,2022
+STU0010,Omer,Biton,omer.biton10@example.edu,Computer Science,2023
+STU0011,Ziv,Mor,ziv.mor11@example.edu,Economics,2022
+STU0012,Alon,Levi,alon.levi12@example.edu,Computer Science,2021
+STU0013,Dana,Khoury,dana.khoury13@example.edu,Computer Science,2021
+STU0014,Omer,Avraham,omer.avraham14@example.edu,Psychology,2022
+STU0015,Yasmin,Halevi,yasmin.halevi15@example.edu,Information Systems,2022
+STU0016,Alon,Azoulay,alon.azoulay16@example.edu,Computer Science,2022
+STU0017,Roy,Biton,roy.biton17@example.edu,Computer Science,2023
+STU0018,Roy,Cohen,roy.cohen18@example.edu,Computer Science,2021
+STU0019,Daniel,Halevi,daniel.halevi19@example.edu,Economics,2022
+STU0020,Omer,Shapira,omer.shapira20@example.edu,Computer Science,2021
+STU0021,Dana,Cohen,dana.cohen21@example.edu,Economics,2022
+STU0022,Alon,Haddad,alon.haddad22@example.edu,Economics,2023
+STU0023,Roy,Baron,roy.baron23@example.edu,Information Systems,2021
+STU0024,Lina,Avraham,lina.avraham24@example.edu,Computer Science,2023
+STU0025,Roy,Levi,roy.levi25@example.edu,Mathematics,2021
+STU0026,Liam,Friedman,liam.friedman26@example.edu,Economics,2023
+STU0027,Eden,Peretz,eden.peretz27@example.edu,Computer Science,2023
+STU0028,Maya,Peretz,maya.peretz28@example.edu,Computer Science,2023
+STU0029,Maya,Azoulay,maya.azoulay29@example.edu,Economics,2021
+STU0030,Ariel,Azoulay,ariel.azoulay30@example.edu,Psychology,2023
+STU0031,Liam,Ben-David,liam.ben-david31@example.edu,Computer Science,2022
+STU0032,Ariel,Friedman,ariel.friedman32@example.edu,Psychology,2022
+STU0033,Amir,Avraham,amir.avraham33@example.edu,Mathematics,2021
+STU0034,Amir,Shapira,amir.shapira34@example.edu,Information Systems,2023
+STU0035,Lina,Moyal,lina.moyal35@example.edu,Mathematics,2021
+STU0036,Noa,Moyal,noa.moyal36@example.edu,Psychology,2023
+STU0037,Adam,Mizrahi,adam.mizrahi37@example.edu,Psychology,2021
+STU0038,Eden,Katz,eden.katz38@example.edu,Information Systems,2022
+STU0039,Maya,Azoulay,maya.azoulay39@example.edu,Mathematics,2022
+STU0040,Daniel,Moyal,daniel.moyal40@example.edu,Psychology,2023
+STU0041,Lina,Ben-David,lina.ben-david41@example.edu,Psychology,2021
+STU0042,Roy,Haddad,roy.haddad42@example.edu,Computer Science,2021
+STU0043,Amir,Biton,amir.biton43@example.edu,Computer Science,2023
+STU0044,Roy,Dahan,roy.dahan44@example.edu,Mathematics,2022
+STU0045,Nadav,Avraham,nadav.avraham45@example.edu,Mathematics,2021
+STU0046,Amir,Yosef,amir.yosef46@example.edu,Economics,2022
+STU0047,Liam,Mizrahi,liam.mizrahi47@example.edu,Economics,2022
+STU0048,Liam,Cohen,liam.cohen48@example.edu,Mathematics,2021
+STU0049,Amir,Peretz,amir.peretz49@example.edu,Economics,2023
+STU0050,Ziv,Amar,ziv.amar50@example.edu,Computer Science,2021
+STU0051,Maya,Dahan,maya.dahan51@example.edu,Psychology,2021
+STU0052,Roni,Friedman,roni.friedman52@example.edu,Psychology,2021
+STU0053,Ziv,Dahan,ziv.dahan53@example.edu,Computer Science,2022
+STU0054,Roni,Levi,roni.levi54@example.edu,Mathematics,2021
+STU0055,Sara,Biton,sara.biton55@example.edu,Mathematics,2023
+STU0056,Ziv,Ben-David,ziv.ben-david56@example.edu,Information Systems,2021
+STU0057,Daniel,Peretz,daniel.peretz57@example.edu,Economics,2021
+STU0058,Daniel,Khoury,daniel.khoury58@example.edu,Economics,2023
+STU0059,Sara,Katz,sara.katz59@example.edu,Information Systems,2023
+STU0060,Adam,Shapira,adam.shapira60@example.edu,Computer Science,2022
+STU0061,Sara,Avraham,sara.avraham61@example.edu,Economics,2022
+STU0062,Lina,Azoulay,lina.azoulay62@example.edu,Information Systems,2021
+STU0063,Omer,Shapira,omer.shapira63@example.edu,Mathematics,2022
+STU0064,Maya,Katz,maya.katz64@example.edu,Mathematics,2023
+STU0065,Eden,Shapira,eden.shapira65@example.edu,Psychology,2022
+STU0066,Noa,Biton,noa.biton66@example.edu,Mathematics,2021
+STU0067,Ariel,Katz,ariel.katz67@example.edu,Computer Science,2021
+STU0068,Nadav,Halevi,nadav.halevi68@example.edu,Mathematics,2023
+STU0069,Yoni,Halevi,yoni.halevi69@example.edu,Psychology,2023
+STU0070,Adam,Shapira,adam.shapira70@example.edu,Psychology,2021
+STU0071,Amir,Levi,amir.levi71@example.edu,Economics,2021
+STU0072,Eden,Amar,eden.amar72@example.edu,Information Systems,2022
+STU0073,Ziv,Mizrahi,ziv.mizrahi73@example.edu,Mathematics,2023
+STU0074,Yoni,Biton,yoni.biton74@example.edu,Mathematics,2023
+STU0075,Lina,Halevi,lina.halevi75@example.edu,Mathematics,2022
+STU0076,Lina,Amar,lina.amar76@example.edu,Information Systems,2021
+STU0077,Ziv,Shapira,ziv.shapira77@example.edu,Information Systems,2023
+STU0078,Ariel,Haddad,ariel.haddad78@example.edu,Economics,2023
+STU0079,Noa,Haddad,noa.haddad79@example.edu,Mathematics,2021
+STU0080,Ziv,Friedman,ziv.friedman80@example.edu,Psychology,2023
+STU0081,Yoni,Moyal,yoni.moyal81@example.edu,Economics,2022
+STU0082,Omer,Yosef,omer.yosef82@example.edu,Economics,2023
+STU0083,Daniel,Mizrahi,daniel.mizrahi83@example.edu,Mathematics,2023
+STU0084,Nadav,Khoury,nadav.khoury84@example.edu,Computer Science,2021
+STU0085,Lina,Azoulay,lina.azoulay85@example.edu,Information Systems,2021
+STU0086,Noa,Levi,noa.levi86@example.edu,Information Systems,2022
+STU0087,Nadav,Mizrahi,nadav.mizrahi87@example.edu,Economics,2022
+STU0088,Ariel,Avraham,ariel.avraham88@example.edu,Economics,2022
+STU0089,Dana,Azoulay,dana.azoulay89@example.edu,Information Systems,2023
+STU0090,Noa,Biton,noa.biton90@example.edu,Economics,2021
+STU0091,Daniel,Yosef,daniel.yosef91@example.edu,Economics,2021
+STU0092,Roy,Azoulay,roy.azoulay92@example.edu,Computer Science,2022
+STU0093,Yasmin,Moyal,yasmin.moyal93@example.edu,Psychology,2023
+STU0094,Nadav,Khoury,nadav.khoury94@example.edu,Economics,2023
+STU0095,Eden,Halevi,eden.halevi95@example.edu,Psychology,2022
+STU0096,Daniel,Baron,daniel.baron96@example.edu,Economics,2022
+STU0097,Sara,Katz,sara.katz97@example.edu,Psychology,2022
+STU0098,Sara,Katz,sara.katz98@example.edu,Economics,2021
+STU0099,Lina,Azoulay,lina.azoulay99@example.edu,Mathematics,2022
+STU0100,Yoni,Amar,yoni.amar100@example.edu,Computer Science,2021
+STU0101,Yasmin,Azoulay,yasmin.azoulay101@example.edu,Economics,2023
+STU0102,Yasmin,Avraham,yasmin.avraham102@example.edu,Computer Science,2022
+STU0103,Ziv,Khoury,ziv.khoury103@example.edu,Psychology,2022
+STU0104,Ziv,Levi,ziv.levi104@example.edu,Information Systems,2022
+STU0105,Dana,Friedman,dana.friedman105@example.edu,Computer Science,2023
+STU0106,Dana,Baron,dana.baron106@example.edu,Computer Science,2022
+STU0107,Lina,Shapira,lina.shapira107@example.edu,Economics,2023
+STU0108,Roy,Ben-David,roy.ben-david108@example.edu,Information Systems,2022
+STU0109,Sara,Katz,sara.katz109@example.edu,Economics,2022
+STU0110,Noa,Shapira,noa.shapira110@example.edu,Mathematics,2023
+STU0111,Dana,Peretz,dana.peretz111@example.edu,Economics,2021
+STU0112,Nadav,Amar,nadav.amar112@example.edu,Computer Science,2022
+STU0113,Ariel,Friedman,ariel.friedman113@example.edu,Computer Science,2021
+STU0114,Ziv,Dahan,ziv.dahan114@example.edu,Economics,2021
+STU0115,Liam,Katz,liam.katz115@example.edu,Economics,2022
+STU0116,Omer,Moyal,omer.moyal116@example.edu,Mathematics,2022
+STU0117,Dana,Katz,dana.katz117@example.edu,Economics,2022
+STU0118,Maya,Baron,maya.baron118@example.edu,Computer Science,2023
+STU0119,Roy,Levi,roy.levi119@example.edu,Mathematics,2021
+STU0120,Maya,Levi,maya.levi120@example.edu,Computer Science,2021
+STU0121,Omer,Cohen,omer.cohen121@example.edu,Psychology,2021
+STU0122,Sara,Dahan,sara.dahan122@example.edu,Economics,2023
+STU0123,Adam,Friedman,adam.friedman123@example.edu,Information Systems,2022
+STU0124,Amir,Mor,amir.mor124@example.edu,Information Systems,2023
+STU0125,Nadav,Biton,nadav.biton125@example.edu,Information Systems,2022
+STU0126,Adam,Friedman,adam.friedman126@example.edu,Computer Science,2022
+STU0127,Ariel,Shapira,ariel.shapira127@example.edu,Economics,2023
+STU0128,Omer,Mizrahi,omer.mizrahi128@example.edu,Psychology,2023
+STU0129,Sara,Biton,sara.biton129@example.edu,Mathematics,2023
+STU0130,Nadav,Biton,nadav.biton130@example.edu,Psychology,2021
+STU0131,Roni,Amar,roni.amar131@example.edu,Economics,2023
+STU0132,Roni,Mizrahi,roni.mizrahi132@example.edu,Psychology,2023
+STU0133,Yoni,Cohen,yoni.cohen133@example.edu,Economics,2022
+STU0134,Adam,Halevi,adam.halevi134@example.edu,Mathematics,2023
+STU0135,Alon,Dahan,alon.dahan135@example.edu,Economics,2021
+STU0136,Eden,Katz,eden.katz136@example.edu,Psychology,2023
+STU0137,Hila,Moyal,hila.moyal137@example.edu,Economics,2023
+STU0138,Ariel,Katz,ariel.katz138@example.edu,Mathematics,2021
+STU0139,Maya,Katz,maya.katz139@example.edu,Economics,2021
+STU0140,Alon,Friedman,alon.friedman140@example.edu,Psychology,2023
+STU0141,Dana,Khoury,dana.khoury141@example.edu,Computer Science,2022
+STU0142,Yoni,Peretz,yoni.peretz142@example.edu,Economics,2021
+STU0143,Roni,Katz,roni.katz143@example.edu,Mathematics,2022
+STU0144,Nadav,Katz,nadav.katz144@example.edu,Psychology,2021
+STU0145,Eden,Avraham,eden.avraham145@example.edu,Computer Science,2021
+STU0146,Ziv,Baron,ziv.baron146@example.edu,Psychology,2021
+STU0147,Hila,Baron,hila.baron147@example.edu,Economics,2021
+STU0148,Maya,Haddad,maya.haddad148@example.edu,Information Systems,2022
+STU0149,Sara,Haddad,sara.haddad149@example.edu,Psychology,2022
+STU0150,Hila,Amar,hila.amar150@example.edu,Psychology,2022
+STU0151,Ziv,Amar,ziv.amar151@example.edu,Mathematics,2022
+STU0152,Alon,Katz,alon.katz152@example.edu,Mathematics,2022
+STU0153,Sara,Biton,sara.biton153@example.edu,Information Systems,2022
+STU0154,Adam,Amar,adam.amar154@example.edu,Information Systems,2021
+STU0155,Omer,Baron,omer.baron155@example.edu,Mathematics,2023
+STU0156,Ariel,Yosef,ariel.yosef156@example.edu,Psychology,2022
+STU0157,Adam,Avraham,adam.avraham157@example.edu,Mathematics,2021
+STU0158,Roni,Peretz,roni.peretz158@example.edu,Mathematics,2021
+STU0159,Roy,Dahan,roy.dahan159@example.edu,Mathematics,2021
+STU0160,Liam,Amar,liam.amar160@example.edu,Mathematics,2023
+STU0161,Yasmin,Baron,yasmin.baron161@example.edu,Computer Science,2021
+STU0162,Ariel,Haddad,ariel.haddad162@example.edu,Economics,2022
+STU0163,Alon,Khoury,alon.khoury163@example.edu,Information Systems,2021
+STU0164,Amir,Baron,amir.baron164@example.edu,Computer Science,2021
+STU0165,Dana,Baron,dana.baron165@example.edu,Computer Science,2023
+STU0166,Liam,Dahan,liam.dahan166@example.edu,Information Systems,2023
+STU0167,Lina,Mizrahi,lina.mizrahi167@example.edu,Information Systems,2021
+STU0168,Roy,Halevi,roy.halevi168@example.edu,Psychology,2023
+STU0169,Nadav,Azoulay,nadav.azoulay169@example.edu,Psychology,2022
+STU0170,Alon,Moyal,alon.moyal170@example.edu,Mathematics,2023
+STU0171,Ziv,Haddad,ziv.haddad171@example.edu,Psychology,2023
+STU0172,Liam,Ben-David,liam.ben-david172@example.edu,Computer Science,2021
+STU0173,Omer,Katz,omer.katz173@example.edu,Computer Science,2021
+STU0174,Sara,Peretz,sara.peretz174@example.edu,Psychology,2021
+STU0175,Daniel,Cohen,daniel.cohen175@example.edu,Economics,2022
+STU0176,Nadav,Baron,nadav.baron176@example.edu,Mathematics,2021
+STU0177,Sara,Haddad,sara.haddad177@example.edu,Mathematics,2023
+STU0178,Alon,Mizrahi,alon.mizrahi178@example.edu,Information Systems,2022
+STU0179,Ariel,Avraham,ariel.avraham179@example.edu,Economics,2021
+STU0180,Roy,Azoulay,roy.azoulay180@example.edu,Information Systems,2022
+STU0181,Yasmin,Mizrahi,yasmin.mizrahi181@example.edu,Computer Science,2021
+STU0182,Lina,Ben-David,lina.ben-david182@example.edu,Psychology,2022
+STU0183,Alon,Biton,alon.biton183@example.edu,Economics,2023
+STU0184,Lina,Shapira,lina.shapira184@example.edu,Mathematics,2023
+STU0185,Roy,Baron,roy.baron185@example.edu,Economics,2021
+STU0186,Nadav,Levi,nadav.levi186@example.edu,Economics,2023
+STU0187,Yoni,Ben-David,yoni.ben-david187@example.edu,Mathematics,2021
+STU0188,Maya,Azoulay,maya.azoulay188@example.edu,Psychology,2023
+STU0189,Noa,Katz,noa.katz189@example.edu,Psychology,2021
+STU0190,Daniel,Baron,daniel.baron190@example.edu,Psychology,2023
+STU0191,Alon,Katz,alon.katz191@example.edu,Information Systems,2023
+STU0192,Ziv,Baron,ziv.baron192@example.edu,Computer Science,2022
+STU0193,Roni,Halevi,roni.halevi193@example.edu,Mathematics,2022
+STU0194,Adam,Peretz,adam.peretz194@example.edu,Mathematics,2022
+STU0195,Hila,Haddad,hila.haddad195@example.edu,Economics,2023
+STU0196,Liam,Moyal,liam.moyal196@example.edu,Computer Science,2022
+STU0197,Amir,Khoury,amir.khoury197@example.edu,Computer Science,2022
+STU0198,Eden,Cohen,eden.cohen198@example.edu,Psychology,2022
+STU0199,Ziv,Levi,ziv.levi199@example.edu,Information Systems,2023
+STU0200,Roni,Ben-David,roni.ben-david200@example.edu,Economics,2023
+STU0201,Alon,Levi,alon.levi201@example.edu,Information Systems,2022
+STU0202,Roy,Dahan,roy.dahan202@example.edu,Mathematics,2022
+STU0203,Hila,Biton,hila.biton203@example.edu,Computer Science,2023
+STU0204,Nadav,Azoulay,nadav.azoulay204@example.edu,Information Systems,2022
+STU0205,Roy,Cohen,roy.cohen205@example.edu,Psychology,2022
+STU0206,Maya,Azoulay,maya.azoulay206@example.edu,Computer Science,2022
+STU0207,Adam,Dahan,adam.dahan207@example.edu,Economics,2023
+STU0208,Lina,Yosef,lina.yosef208@example.edu,Mathematics,2022
+STU0209,Hila,Baron,hila.baron209@example.edu,Information Systems,2022
+STU0210,Roy,Dahan,roy.dahan210@example.edu,Economics,2021
+STU0211,Nadav,Yosef,nadav.yosef211@example.edu,Information Systems,2021
+STU0212,Amir,Halevi,amir.halevi212@example.edu,Mathematics,2023
+STU0213,Amir,Cohen,amir.cohen213@example.edu,Mathematics,2023
+STU0214,Lina,Friedman,lina.friedman214@example.edu,Psychology,2023
+STU0215,Hila,Dahan,hila.dahan215@example.edu,Economics,2023
+STU0216,Hila,Mor,hila.mor216@example.edu,Mathematics,2023
+STU0217,Roy,Shapira,roy.shapira217@example.edu,Economics,2022
+STU0218,Omer,Azoulay,omer.azoulay218@example.edu,Psychology,2022
+STU0219,Sara,Halevi,sara.halevi219@example.edu,Computer Science,2022
+STU0220,Hila,Shapira,hila.shapira220@example.edu,Economics,2023
+STU0221,Yasmin,Baron,yasmin.baron221@example.edu,Computer Science,2021
+STU0222,Eden,Friedman,eden.friedman222@example.edu,Mathematics,2021
+STU0223,Alon,Biton,alon.biton223@example.edu,Psychology,2022
+STU0224,Noa,Dahan,noa.dahan224@example.edu,Economics,2023
+STU0225,Yasmin,Mizrahi,yasmin.mizrahi225@example.edu,Economics,2022
+STU0226,Yoni,Ben-David,yoni.ben-david226@example.edu,Economics,2023
+STU0227,Maya,Khoury,maya.khoury227@example.edu,Psychology,2022
+STU0228,Yoni,Baron,yoni.baron228@example.edu,Psychology,2021
+STU0229,Nadav,Mizrahi,nadav.mizrahi229@example.edu,Information Systems,2023
+STU0230,Lina,Azoulay,lina.azoulay230@example.edu,Computer Science,2022
+STU0231,Adam,Biton,adam.biton231@example.edu,Economics,2021
+STU0232,Lina,Cohen,lina.cohen232@example.edu,Computer Science,2022
+STU0233,Liam,Haddad,liam.haddad233@example.edu,Mathematics,2022
+STU0234,Ziv,Dahan,ziv.dahan234@example.edu,Information Systems,2023
+STU0235,Ziv,Friedman,ziv.friedman235@example.edu,Information Systems,2021
+STU0236,Daniel,Mizrahi,daniel.mizrahi236@example.edu,Psychology,2022
+STU0237,Nadav,Azoulay,nadav.azoulay237@example.edu,Economics,2023
+STU0238,Yasmin,Azoulay,yasmin.azoulay238@example.edu,Economics,2023
+STU0239,Amir,Moyal,amir.moyal239@example.edu,Mathematics,2023
+STU0240,Noa,Moyal,noa.moyal240@example.edu,Mathematics,2023
+STU0241,Roy,Peretz,roy.peretz241@example.edu,Computer Science,2022
+STU0242,Roni,Friedman,roni.friedman242@example.edu,Mathematics,2023
+STU0243,Ziv,Katz,ziv.katz243@example.edu,Economics,2022
+STU0244,Omer,Shapira,omer.shapira244@example.edu,Economics,2021
+STU0245,Sara,Shapira,sara.shapira245@example.edu,Psychology,2022
+STU0246,Ariel,Haddad,ariel.haddad246@example.edu,Mathematics,2021
+STU0247,Dana,Katz,dana.katz247@example.edu,Computer Science,2023
+STU0248,Liam,Ben-David,liam.ben-david248@example.edu,Economics,2022
+STU0249,Sara,Ben-David,sara.ben-david249@example.edu,Mathematics,2021
+STU0250,Omer,Ben-David,omer.ben-david250@example.edu,Mathematics,2023
+STU0251,Yasmin,Biton,yasmin.biton251@example.edu,Computer Science,2022
+STU0252,Alon,Levi,alon.levi252@example.edu,Psychology,2022
+STU0253,Yasmin,Mizrahi,yasmin.mizrahi253@example.edu,Mathematics,2022
+STU0254,Ziv,Peretz,ziv.peretz254@example.edu,Information Systems,2021
+STU0255,Roy,Mor,roy.mor255@example.edu,Psychology,2023
+STU0256,Amir,Peretz,amir.peretz256@example.edu,Mathematics,2022
+STU0257,Lina,Khoury,lina.khoury257@example.edu,Computer Science,2022
+STU0258,Maya,Dahan,maya.dahan258@example.edu,Information Systems,2023
+STU0259,Dana,Amar,dana.amar259@example.edu,Mathematics,2021
+STU0260,Dana,Cohen,dana.cohen260@example.edu,Mathematics,2023
+STU0261,Adam,Moyal,adam.moyal261@example.edu,Mathematics,2023
+STU0262,Amir,Friedman,amir.friedman262@example.edu,Economics,2023
+STU0263,Roni,Biton,roni.biton263@example.edu,Information Systems,2022
+STU0264,Noa,Ben-David,noa.ben-david264@example.edu,Psychology,2022
+STU0265,Nadav,Azoulay,nadav.azoulay265@example.edu,Computer Science,2023
+STU0266,Alon,Haddad,alon.haddad266@example.edu,Economics,2021
+STU0267,Yasmin,Levi,yasmin.levi267@example.edu,Computer Science,2022
+STU0268,Hila,Biton,hila.biton268@example.edu,Computer Science,2021
+STU0269,Roy,Dahan,roy.dahan269@example.edu,Economics,2022
+STU0270,Roni,Amar,roni.amar270@example.edu,Economics,2023
+STU0271,Yasmin,Halevi,yasmin.halevi271@example.edu,Computer Science,2022
+STU0272,Nadav,Halevi,nadav.halevi272@example.edu,Mathematics,2021
+STU0273,Roni,Avraham,roni.avraham273@example.edu,Economics,2022
+STU0274,Sara,Mor,sara.mor274@example.edu,Computer Science,2023
+STU0275,Roni,Amar,roni.amar275@example.edu,Mathematics,2021
+STU0276,Dana,Katz,dana.katz276@example.edu,Information Systems,2021
+STU0277,Alon,Mizrahi,alon.mizrahi277@example.edu,Information Systems,2023
+STU0278,Nadav,Cohen,nadav.cohen278@example.edu,Computer Science,2022
+STU0279,Sara,Dahan,sara.dahan279@example.edu,Psychology,2021
+STU0280,Maya,Amar,maya.amar280@example.edu,Information Systems,2023
+STU0281,Omer,Azoulay,omer.azoulay281@example.edu,Mathematics,2021
+STU0282,Nadav,Cohen,nadav.cohen282@example.edu,Mathematics,2021
+STU0283,Yasmin,Amar,yasmin.amar283@example.edu,Mathematics,2021
+STU0284,Adam,Cohen,adam.cohen284@example.edu,Information Systems,2021
+STU0285,Roni,Azoulay,roni.azoulay285@example.edu,Psychology,2022
+STU0286,Noa,Peretz,noa.peretz286@example.edu,Mathematics,2021
+STU0287,Yasmin,Halevi,yasmin.halevi287@example.edu,Psychology,2021
+STU0288,Maya,Baron,maya.baron288@example.edu,Economics,2022
+STU0289,Eden,Friedman,eden.friedman289@example.edu,Computer Science,2022
+STU0290,Eden,Azoulay,eden.azoulay290@example.edu,Psychology,2021
+STU0291,Eden,Haddad,eden.haddad291@example.edu,Economics,2023
+STU0292,Noa,Levi,noa.levi292@example.edu,Economics,2022
+STU0293,Ziv,Biton,ziv.biton293@example.edu,Economics,2023
+STU0294,Alon,Mizrahi,alon.mizrahi294@example.edu,Computer Science,2022
+STU0295,Nadav,Dahan,nadav.dahan295@example.edu,Computer Science,2021
+STU0296,Amir,Ben-David,amir.ben-david296@example.edu,Psychology,2023
+STU0297,Yoni,Shapira,yoni.shapira297@example.edu,Psychology,2023
+STU0298,Lina,Moyal,lina.moyal298@example.edu,Psychology,2023
+STU0299,Ziv,Biton,ziv.biton299@example.edu,Computer Science,2023
+STU0300,Roy,Avraham,roy.avraham300@example.edu,Economics,2022
